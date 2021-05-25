@@ -1,0 +1,112 @@
+:root  {
+    --principal: #3a1212;
+    --secondary:#610000;
+    --text: #E8A323;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('./assets/Background.png');
+    background-size: cover;
+}
+.container {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+}
+.logo{
+    min-width: 150px;
+    margin-top: 2%;
+    width: 30%;
+}
+.logo img{
+    width: 100%;
+}
+.links{
+    margin-top: 5%;
+    height: 200px;
+    justify-content:space-between; 
+    width: 100%;
+}
+.links a{
+    margin: 0 auto;
+    max-width: 100%;
+   
+}
+.links a button{
+    min-width: 300px;
+    max-width: 100%;
+    width: 80vw;
+    color: var(--text);
+    padding: 8px 16px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+}
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin: 2rem;
+}
+.photos .trudelPhoto{
+    height: 135px;
+}
+.photos .trudelPhoto:nth-child(even){
+    transform: rotate(10deg)
+}
+.photos .trudelPhoto:nth-child(odd){
+    transform: rotate(-10deg)
+}
+.photos .trudelPhoto img{
+    border: 2px solid var(--principal);
+    border-radius: 5px;
+    height: 100%;
+    
+}
+
+footer {
+    margin-top:auto;
+    background-color: var(--principal);
+    height: 200px;
+}
+footer h2{
+    color: var(--text);
+    letter-spacing: 0.34em;
+    font-weight: normal;
+}
+footer .contact{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .contact a img{
+    width: 51px;
+}
+footer .credits,
+footer .credits a{
+    color: rgba(129, 123, 123, 0.63);
+    font-size: 10px;
+}
