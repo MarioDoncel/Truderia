@@ -32,7 +32,7 @@ body {
 .container {
     max-width: 700px;
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
 }
 .logo{
     min-width: 150px;
@@ -126,6 +126,7 @@ footer .credits a{
     }
     .photos .trudelPhoto{
         max-width: 25vw;
+        height: 100px;
         display: flex;
         justify-content: center;
     }
