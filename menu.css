@@ -75,6 +75,7 @@ header hr:nth-child(3){
 .menuItem {
     display: flex;
     justify-content:space-evenly;
+    align-items: center;
     width: 90%;
     margin-bottom: 0.5rem;
 }
@@ -151,11 +152,13 @@ main .menuItem .circleImage.aditional img{
         font-size: 54px;
         text-align: center;
     }
-    main .menuItem .circleImage img {
+    main .menuItem .circleImage img,
+    main .menuItem .circleImage {
         width: 90px;
         height: 90px;
     }
-    main .menuItem .circleImage.aditional img{
+    main .menuItem .circleImage.aditional img,
+    main .menuItem .circleImage.aditional{
         width: 90px;
         height: 60px;
     }
@@ -167,7 +170,7 @@ main .menuItem .circleImage.aditional img{
     .menuItem .item .description{
         width: 150px;
         height: 70px;
-        border: 2px solid var(--text);
+        border: 1px solid var(--text);
         background-color: rgba(39, 37, 37, 0.4);
         background-image: none;
         margin: 6px 0 10px 0 ;
