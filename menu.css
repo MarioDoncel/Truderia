@@ -6,7 +6,7 @@
     max-width: 1000px;
     width: 95%;
     margin: 0 auto;
-    height: 10%;
+   
 }
 header{
     display: flex;
@@ -27,8 +27,6 @@ header .logo{
     margin: 0;
     width: 40%;
     max-width: 500px;
-    margin-bottom: -40px;
-    margin-right: -80px;
     margin: -40px -80px -40px -80px;
 }
 header .menu{
@@ -49,24 +47,25 @@ header hr:nth-child(3){
 }
 .gridTwo {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     column-gap: 1rem;
 }
 .category{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 .categoryName{
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 .categoryName h3{
     margin-left: 1rem;
     font-weight: 500;
     letter-spacing:12px;
+    font-size: 36PX;
 }
 .categoryName i{
-    font-size: 48px;
+    font-size: 54px;
     text-align: center;
 }
 .categoryName h3,
@@ -75,32 +74,38 @@ header hr:nth-child(3){
 }
 .menuItem {
     display: flex;
-    justify-content:center;
-    width: 100%;
+    justify-content:space-evenly;
+    width: 90%;
     margin-bottom: 0.5rem;
 }
 .menuItem .item {
     margin-left: 0.5rem;
     align-items:flex-start ;
 }
-.menuItem .item p{
-    font-size: 20px;
+.menuItem .item .itemName p{
+    font-size: 26px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+    min-width: 350px;
 }
 .menuItem .item .description{
-    width: 290px;
-    height: 70px;
+    width: 350px;
+    height: 90px;
     background-image: url('./assets/Menu/caixaTexto.png');
     background-position: center;
-    background-size: contain;
+    background-size:contain;
+    background-repeat: no-repeat;
 }
 .menuItem .item .description p{
+    padding-left: 10px;
+    padding-right: 4px;
     margin-top: 12px;
     font-size: 18px;
+    text-shadow: none;
+    text-align: center;
 }
 .menuItem .price{
     margin-left: 0.5rem;
-    font-size: 24px;
+    font-size: 32px;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
     text-align: center;
     
@@ -120,17 +125,72 @@ main .menuItem .circleImage img{
     padding: 3px;
     border: 2px solid var(--text);
 }
+main .menuItem .circleImage.aditional img{
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+}
 
 
 
-
-/* @media
-header .menu h2{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    color: var(--text);
-    font-family: 'Amatic SC', cursive;
-    font-size: 32px;
-    line-height: 0;
-    letter-spacing: -8px;
-} */
+@media  (max-width:650px){
+    hr{
+        display: none;
+    }
+    header .logo {
+        min-width: 290px;
+        margin: 0;
+    }
+    .categoryName h3{
+        margin-left: 1rem;
+        font-weight: 500;
+        letter-spacing:12px;
+        font-size: 24PX;
+    }
+    .categoryName i{
+        font-size: 54px;
+        text-align: center;
+    }
+    main .menuItem .circleImage img {
+        width: 90px;
+        height: 90px;
+    }
+    main .menuItem .circleImage.aditional img{
+        width: 90px;
+        height: 60px;
+    }
+    .menuItem .item .itemName p{
+        font-size: 18px;
+        min-width: 150px;
+        width: 150px;
+    }
+    .menuItem .item .description{
+        width: 150px;
+        height: 70px;
+        border: 2px solid var(--text);
+        background-color: rgba(39, 37, 37, 0.4);
+        background-image: none;
+        margin: 6px 0 10px 0 ;
+        border-radius: 4px;
+    }
+    .menuItem .item .description p{
+        font-size: 12px;
+        margin-top: 0;
+    }
+    .menuItem .price{
+        margin-left: 0.5rem;
+        font-size: 16px;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        
+    }
+    header .menu h2{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        color: var(--text);
+        font-family: 'Amatic SC', cursive;
+        font-size: 32px;
+        line-height: 0;
+        letter-spacing: -8px;
+    }
+}
