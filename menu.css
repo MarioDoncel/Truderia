@@ -24,10 +24,9 @@ header hr:nth-child(1){
 }
 
 header .logo{
-    margin: 0;
+    margin: 10px 0 ;
     width: 40%;
-    max-width: 500px;
-    margin: -40px -80px -40px -80px;
+    max-width: 300px;
 }
 header .menu{
     align-self:flex-start;
@@ -139,7 +138,7 @@ main .menuItem .circleImage.aditional img{
         display: none;
     }
     header .logo {
-        min-width: 290px;
+        min-width: 150px;
         margin: 0;
     }
     .categoryName h3{
