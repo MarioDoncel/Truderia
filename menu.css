@@ -125,6 +125,10 @@ main .menuItem .circleImage img{
     padding: 3px;
     border: 2px solid var(--text);
 }
+main .menuItem .circleImage.aditional{
+    width: 120px;
+    height: 80px;
+}
 main .menuItem .circleImage.aditional img{
     width: 120px;
     height: 80px;
