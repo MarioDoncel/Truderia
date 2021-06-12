@@ -36,14 +36,22 @@ const Trudels = [
         description:"Recheado com brigadeiro feito com os melhores ingredientes.",
         image:, 
         price:12
-    },{
+    },
+    {
         flavor:"KIT KAT CREMOSO",
         description:"Recheado com um creme de KIT KAT que dispensa comentários.",
         image:, 
         price:12
-    },{
+    },
+    {
         flavor:"OVOMALTINE",
         description:"Recheado com creme do polêmico, crocante e irresistível OVOMALTINE.",
+        image:, 
+        price:13
+    },
+    {
+        flavor:"PAÇOKITA",
+        description:'Recheado com um creme de paçoca "pra lá de bão!".',
         image:, 
         price:13
     },
@@ -52,13 +60,13 @@ const Trudels = [
 const additionals = [
     {
         name:"MORANGO",
-        description:"(5 un)",
+        description:"",
         image:, 
         price: 4
     },  
     {
         name:"AMENDOIM",
-        description:"(5 un)",
+        description:"",
         image:, 
         price:2
     },  
@@ -81,13 +89,13 @@ const additionals = [
         price: 1
     },  
     {
-        name:"KIT KAT",
+        name:"KIT KAT PICADO",
         description:"",
         image:,
         price: 2
     },  
     {
-        name:"SONHO DE VALSA",
+        name:"SONHO DE VALSA PICADO",
         description:"",
         image:,
         price: 2
