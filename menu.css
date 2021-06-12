@@ -6,8 +6,10 @@
     max-width: 1000px;
     width: 95%;
     margin: 0 auto;
-   
 }
+
+/* --------- HEADER ----------- */
+
 header{
     display: flex;
     align-items: center;
@@ -44,11 +46,8 @@ header .menu h2{
 header hr:nth-child(3){
     width: 15%;
 }
-.gridTwo {
-    display: grid;
-    grid-template-columns: 1fr ;
-    column-gap: 1rem;
-}
+
+/* ------ CATEGORY ---------- */
 .category{
     margin-bottom: 1.5rem;
 }
@@ -71,12 +70,56 @@ header hr:nth-child(3){
 .categoryName i{
     color: var(--text);
 }
+
+/*------- ITEM MENU-------- */
 .menuItem {
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     width: 90%;
     margin-bottom: 0.5rem;
+}
+main .menuItem .image{ 
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+main .menuItem .image img{ 
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    padding: 3px;
+    border: 2px solid var(--text);
+}
+main .menuItem .image.trudel{
+    width: 90px;
+    height: 120px;
+}
+main .menuItem .image.trudel img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 20%;
+}
+main .menuItem .image.adittional{
+    width: 105px;
+    height: 80px;
+}
+main .menuItem .image.adittional img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+main .menuItem .image.icecream{
+    width: 105px;
+    height:105px;
+}
+main .menuItem .image.icecream img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
 }
 .menuItem .item {
     margin-left: 0.5rem;
@@ -108,34 +151,11 @@ header hr:nth-child(3){
     font-size: 32px;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
     text-align: center;
-    
-}
-main .menuItem .circleImage{
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    border: 2px solid rgba(0, 0, 0, 0);
-    display: flex;
-    align-items: center;
-}
-main .menuItem .circleImage img{
-    width: 100%;
-    object-fit: fill;
-    border-radius: 100%;
-    padding: 3px;
-    border: 2px solid var(--text);
-}
-main .menuItem .circleImage.aditional{
-    width: 120px;
-    height: 80px;
-}
-main .menuItem .circleImage.aditional img{
-    width: 120px;
-    height: 80px;
-    object-fit: cover;
 }
 
 
+
+/*----- RESPONSIVE ------ */
 
 @media  (max-width:650px){
     hr{
@@ -155,15 +175,13 @@ main .menuItem .circleImage.aditional img{
         font-size: 54px;
         text-align: center;
     }
-    main .menuItem .circleImage img,
-    main .menuItem .circleImage {
-        width: 90px;
-        height: 90px;
-    }
-    main .menuItem .circleImage.aditional img,
-    main .menuItem .circleImage.aditional{
+    main .menuItem .image.adittional{
         width: 90px;
         height: 60px;
+    }
+    main .menuItem .image.icecream{
+        width: 90px;
+        height:90px;
     }
     .menuItem .item .itemName p{
         font-size: 18px;
@@ -173,11 +191,16 @@ main .menuItem .circleImage.aditional img{
     .menuItem .item .description{
         width: 150px;
         height: 70px;
-        border: 1px solid var(--text);
+        background-image: url('./assets/Menu/caixaTextoMobile.png');
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+        padding: 6px 4px 0 0 ;
+        /* border: 1px solid var(--text);
         background-color: rgba(39, 37, 37, 0.4);
         background-image: none;
         margin: 6px 0 10px 0 ;
-        border-radius: 4px;
+        border-radius: 4px; */
     }
     .menuItem .item .description p{
         font-size: 12px;

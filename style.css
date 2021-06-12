@@ -109,6 +109,11 @@ footer .contact{
 }
 footer .contact a img{
     width: 51px;
+    padding: 2px;
+    transition: ease-in-out 200ms;
+}
+footer .contact a img:hover{
+    filter: brightness(1.5)
 }
 footer .credits,
 footer .credits a{
