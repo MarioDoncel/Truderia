@@ -57,13 +57,13 @@ const trudel = [
         image:"./assets/Menu/OvomaltineBg5.webp", 
         price:15
     },
-    {
-        flavour:"PAÇOQUITA",
-        span:"*EDIÇÃO LIMITADA JUNINA*",
-        description:'Recheado com um creme de paçoca "pra lá de bão!"',
-        image:"./assets/Menu/PacoquitaBg7.webp", 
-        price:15
-    },
+    // {
+    //     flavour:"PAÇOQUITA",
+    //     span:"*EDIÇÃO LIMITADA JUNINA*",
+    //     description:'Recheado com um creme de paçoca "pra lá de bão!"',
+    //     image:"./assets/Menu/PacoquitaBg7.webp", 
+    //     price:15
+    // },
 ]
 
 const additional = [
