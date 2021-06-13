@@ -2,11 +2,11 @@
 // Cardapio
 const trudel = [
     {
-        flavour:"Tradicional",
+        flavour:"TRADICIONAL",
         span:"",
         description:"Deliciosa massa do leste europeu com açúcar e canela.",
         image:"./assets/Menu/TradicionalBg7.webp", 
-        price: 8
+        price: 10
     },
     {
         flavour:"BRIGADEIRO",
@@ -20,35 +20,35 @@ const trudel = [
         span:"",
         description:"Recheado com um doce de leite divino!",
         image:"./assets/Menu/DoceDeLeiteBg4.webp", 
-        price:10
+        price:12
     },
     {
         flavour:"CHOCOLATE MEIO AMARGO",
         span:"",
         description:"Recheado com o melhor meio amargo!",
         image:"./assets/Menu/MeioAmargoBg4.webp", 
-        price:11
+        price:12
     },
     {
         flavour:"CHOCOLATE BRANCO",
         span:"",
-        description:"Recheado com chocolate branco de dar agua na boca!",
+        description:"Recheado com chocolate branco de dar água na boca!",
         image:"./assets/Menu/ChocolateBrancoBg7.webp", 
-        price:12
+        price:13
     },
     {
         flavour:"NUTELLA",
         span:"",
         description:"Recheado com o creme de avelã queridinho do Brasil.",
         image:"./assets/Menu/NutellaBg4.webp", 
-        price:12
+        price:14
     },
     {
         flavour:"KIT KAT CREMOSO",
         span:"",
         description:"Recheado com um creme de KIT KAT que dispensa comentários.",
         image:"./assets/Menu/KitkatBg7.webp", 
-        price:12
+        price:14
     },
     {
         flavour:"OVOMALTINE",
@@ -79,7 +79,7 @@ const additional = [
         span:"",
         description:"",
         image:"./assets/Menu/Adicionais/granulado.jpg", 
-        price: 2
+        price: 1
     },  
     {
         flavour:"AMENDOIM",
@@ -93,28 +93,28 @@ const additional = [
         span:"",
         description:"",
         image:"./assets/Menu/Adicionais/nozes.jpg", 
-        price: 2
+        price: 3
     },  
     {
         flavour:"COCO RALADO",
         span:"",
         description:"",
         image:"./assets/Menu/Adicionais/cocoRalado.jpg", 
-        price: 1
+        price: 2
     },  
     {
         flavour:"KIT KAT PICADO",
         span:"",
         description:"",
         image:"./assets/Menu/Adicionais/kitKat2.jpg",
-        price: 2
+        price: 3
     },  
     {
         flavour:"SONHO DE VALSA PICADO",
         span:"",
         description:"",
         image:"./assets/Menu/Adicionais/sonhoDeValsa.jpg",
-        price: 2
+        price: 3
     },  
     {
         flavour:"DOBRO DE RECHEIO",
@@ -149,7 +149,7 @@ const iceCream = [
         price: 4
     },
     {
-        flavour:"CAFÉ",
+        flavour:"CAFÉ MOCHA",
         span:"(Café com chocolate)",
         description:"",
         image:"./assets/Menu/ChocolateECoco.jpg",
@@ -204,7 +204,8 @@ menu.forEach(category => {
             html += `
             <div class="menuItem">
             <div class="image ${category.category}">
-                    <img src="${item.image}" alt="${item.flavour}"></div>
+                    <img src="${item.image}" alt="${item.flavour}" onclick="lightbox.open(event)">
+                    </div>
                     <div class="item flex-column">
                         <div class="itemName">
                         ${item.span? `<p>${item.flavour}<br><span>${item.span}</span></p>` : `<p>${item.flavour} </p>`}
@@ -222,3 +223,20 @@ menu.forEach(category => {
     menuHtml.innerHTML += html
 });
 
+const lightbox = {
+    target: document.querySelector('.lightbox-target'),
+    image: document.querySelector('.lightbox-target img'),
+    closeButton: document.querySelector('.lightbox-close'),
+    open(e){
+        console.log('aqui')
+        lightbox.target.style.opacity = 1
+        lightbox.target.style.top = 0
+        lightbox.closeButton.style.top = 0
+        lightbox.image.src = e.target.src
+    },
+    close(){
+        lightbox.target.style.opacity = 0
+        lightbox.target.style.top = '-100%'
+        lightbox.closeButton.style.top = '-80px'
+    }
+}
