@@ -1,144 +1,224 @@
 
 // Cardapio
-const Trudels = [
+const trudel = [
     {
-        flavor:"Tradicional",
-        description:"Açúcar e canela.",
-        image:, 
+        flavour:"Tradicional",
+        span:"",
+        description:"Deliciosa massa do leste europeu com açúcar e canela.",
+        image:"./assets/Menu/TradicionalBg7.webp", 
         price: 8
     },
     {
-        flavor:"DOCE DE LEITE",
-        description:"Recheado com um delicioso de doce de leite",
-        image:, 
+        flavour:"BRIGADEIRO",
+        span:"",
+        description:"Recheado com brigadeiro de lamber os dedos!",
+        image:"./assets/Menu/BrigadeiroBg5.webp", 
+        price:12
+    },
+    {
+        flavour:"DOCE DE LEITE",
+        span:"",
+        description:"Recheado com um doce de leite divino!",
+        image:"./assets/Menu/DoceDeLeiteBg4.webp", 
         price:10
     },
     {
-        flavor:"CHOCOLATE MEIO AMARGO",
-        description:"Recheado com o melhor meio amargo 70%!",
-        image:, 
+        flavour:"CHOCOLATE MEIO AMARGO",
+        span:"",
+        description:"Recheado com o melhor meio amargo!",
+        image:"./assets/Menu/MeioAmargoBg4.webp", 
         price:11
     },
     {
-        flavor:"CHOCOLATE BRANCO",
-        description:"Recheado com chocolate branco de dar agua na boca.",
-        image:, 
+        flavour:"CHOCOLATE BRANCO",
+        span:"",
+        description:"Recheado com chocolate branco de dar agua na boca!",
+        image:"./assets/Menu/ChocolateBrancoBg7.webp", 
         price:12
     },
     {
-        flavor:"NUTELLA",
-        description:"Recheado com Nutella, o creme de avelã",
-        image:, 
+        flavour:"NUTELLA",
+        span:"",
+        description:"Recheado com o creme de avelã queridinho do Brasil.",
+        image:"./assets/Menu/NutellaBg4.webp", 
         price:12
     },
     {
-        flavor:"BRIGADEIRO",
-        description:"Recheado com brigadeiro feito com os melhores ingredientes.",
-        image:, 
-        price:12
-    },
-    {
-        flavor:"KIT KAT CREMOSO",
+        flavour:"KIT KAT CREMOSO",
+        span:"",
         description:"Recheado com um creme de KIT KAT que dispensa comentários.",
-        image:, 
+        image:"./assets/Menu/KitkatBg7.webp", 
         price:12
     },
     {
-        flavor:"OVOMALTINE",
-        description:"Recheado com creme do polêmico, crocante e irresistível OVOMALTINE.",
-        image:, 
-        price:13
+        flavour:"OVOMALTINE",
+        span:"",
+        description:"Recheado com um creme de OVOMALTINE crocante e irresistível!",
+        image:"./assets/Menu/OvomaltineBg5.webp", 
+        price:15
     },
     {
-        flavor:"PAÇOKITA",
-        description:'Recheado com um creme de paçoca "pra lá de bão!".',
-        image:, 
-        price:13
+        flavour:"PAÇOQUITA",
+        span:"*EDIÇÃO LIMITADA JUNINA*",
+        description:'Recheado com um creme de paçoca "pra lá de bão!"',
+        image:"./assets/Menu/PacoquitaBg7.webp", 
+        price:15
     },
 ]
 
-const additionals = [
+const additional = [
     {
-        name:"MORANGO",
+        flavour:"MORANGO",
+        span:"",
         description:"",
-        image:, 
+        image:"./assets/Menu/Adicionais/morango.jpg", 
         price: 4
     },  
     {
-        name:"AMENDOIM",
+        flavour:"GRANULADO",
+        span:"",
         description:"",
-        image:, 
+        image:"./assets/Menu/Adicionais/granulado.jpg", 
+        price: 2
+    },  
+    {
+        flavour:"AMENDOIM",
+        span:"",
+        description:"",
+        image:"./assets/Menu/Adicionais/amendoim.jpg", 
         price:2
     },  
     {
-        name:"NOZES",
+        flavour:"NOZES",
+        span:"",
         description:"",
-        image:, 
+        image:"./assets/Menu/Adicionais/nozes.jpg", 
         price: 2
     },  
     {
-        name:"GRANULADO",
+        flavour:"COCO RALADO",
+        span:"",
         description:"",
-        image:, 
-        price: 2
-    },  
-    {
-        name:"COCO RALADO",
-        description:"",
-        image:, 
+        image:"./assets/Menu/Adicionais/cocoRalado.jpg", 
         price: 1
     },  
     {
-        name:"KIT KAT PICADO",
+        flavour:"KIT KAT PICADO",
+        span:"",
         description:"",
-        image:,
+        image:"./assets/Menu/Adicionais/kitKat2.jpg",
         price: 2
     },  
     {
-        name:"SONHO DE VALSA PICADO",
+        flavour:"SONHO DE VALSA PICADO",
+        span:"",
         description:"",
-        image:,
+        image:"./assets/Menu/Adicionais/sonhoDeValsa.jpg",
         price: 2
     },  
     {
-        name:"DOBRO DE RECHEIO",
+        flavour:"DOBRO DE RECHEIO",
+        span:"",
         description:"",
-        image:,
+        image:"./assets/Menu/Adicionais/dobroRecheio.jpg",
         price: 4
     },  
 
 ]
 
-const iceCreams = [
+const iceCream = [
     {
-        flavor:"CREME",
-        image:,
+        flavour:"CREME",
+        span:"",
+        description:"",
+        image:"./assets/Menu/ChocolateECoco.jpg",
         price: 4
     },
     {
-        flavor:"NINHO TRUFADO",
-        image:,
+        flavour:"NINHO TRUFADO",
+        span:"",
+        description:"",
+        image:"./assets/Menu/ChocolateECoco.jpg",
         price: 4
     },
     {
-        flavor:"IOGURTE COM FRUTAS VERMELHAS",
-        image:,
+        flavour:"IOGURTE COM FRUTAS VERMELHAS",
+        span:"",
+        description:"",
+        image:"./assets/Menu/ChocolateECoco.jpg",
         price: 4
     },
     {
-        flavor:"CAFÉ",
-        image:,
+        flavour:"CAFÉ",
+        span:"(Café com chocolate)",
+        description:"",
+        image:"./assets/Menu/ChocolateECoco.jpg",
         price: 4
     },
     {
-        flavor:"BEM CASADO",
-        image:,
+        flavour:"BEM CASADO",
+        span:"(Pão de ló com doce de leite)",
+        description:"",
+        image:"./assets/Menu/ChocolateECoco.jpg",
         price: 4
     },
     {
-        flavor:"SENSAÇÃO ",
-        image:,
+        flavour:"SENSAÇÃO ",
+        span:"(Morango com pedaços de chocolate)",
+        description:"",
+        image:"./assets/Menu/ChocolateECoco.jpg",
         price: 4
     }
 ]
+
+const menu = [
+    {
+        name: "TRUDEL",
+        category:"trudel",
+        itens: trudel
+    }, 
+    {
+        name: "ADICIONAIS",
+        category:"adittional",
+        itens: additional
+    }, 
+    {
+        name: "SORVETES",
+        category:"icecream",
+        itens: iceCream
+    }
+]
     
+    
+const menuHtml = document.querySelector('#menu')
+menu.forEach(category => {
+    let html = ''
+    html +=`
+        <div class="category flex-column">
+            <div class="categoryName">
+                <i class="fas fa-caret-down"></i>
+                <h3>${category.name}</h3>
+            </div>
+    `
+    category.itens.forEach(item => {
+            html += `
+            <div class="menuItem">
+            <div class="image ${category.category}">
+                    <img src="${item.image}" alt="${item.flavour}"></div>
+                    <div class="item flex-column">
+                        <div class="itemName">
+                        ${item.span? `<p>${item.flavour}<br><span>${item.span}</span></p>` : `<p>${item.flavour} </p>`}
+                        </div>
+                        ${item.description? `<div class="description flex-column"><p>${item.description}</p></div>`:''}
+                        
+                    </div>
+                    <div class="price flex-column">R$${item.price}</div>
+                </div> <!-- menuItem -->
+            `
+    })
+    html += `
+        </div> <!-- category -->
+    `
+    menuHtml.innerHTML += html
+});
+

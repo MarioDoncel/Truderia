@@ -127,8 +127,14 @@ main .menuItem .image.icecream img{
 }
 .menuItem .item .itemName p{
     font-size: 26px;
+    line-height: 26px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
     min-width: 350px;
+    width:350px
+}
+.menuItem .item .itemName p span {
+    line-height: 14px;
+    font-size: 14px;
 }
 .menuItem .item .description{
     width: 350px;
