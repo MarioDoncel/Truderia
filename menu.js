@@ -82,6 +82,13 @@ const additional = [
         price: 1
     },  
     {
+        flavour:"COCO RALADO",
+        span:"",
+        description:"",
+        image:"./assets/Menu/Adicionais/cocoRalado.jpg", 
+        price: 2
+    },  
+    {
         flavour:"OVOMALTINE",
         span:"",
         description:"",
@@ -101,13 +108,6 @@ const additional = [
         description:"",
         image:"./assets/Menu/Adicionais/nozes.jpg", 
         price: 3
-    },  
-    {
-        flavour:"COCO RALADO",
-        span:"",
-        description:"",
-        image:"./assets/Menu/Adicionais/cocoRalado.jpg", 
-        price: 2
     },  
     {
         flavour:"KIT KAT PICADO",
