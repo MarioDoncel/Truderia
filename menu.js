@@ -64,6 +64,13 @@ const trudel = [
     //     image:"./assets/Menu/PacoquitaBg7.webp", 
     //     price:15
     // },
+    {
+        flavour:"KIT MINITRUDEL",
+        span:"6 mini Trudels nos sabores :",
+        description:'Doce de Leite, Nutella, Brigadeiro,  Chocolate Branco,  Ovomaltine  e Kit Kat',
+        image:"./assets/Menu/KitMiniTrudel1.webp", 
+        price:45
+    }
 ]
 
 const additional = [
