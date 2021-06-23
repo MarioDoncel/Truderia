@@ -260,4 +260,4 @@ const lightbox = {
 // Destaque de novidade com Lightbox e SetTimeout
 
 lightbox.open(false)
-setTimeout(lightbox.close, 4000);
+setTimeout(lightbox.close, 5000);
