@@ -57,13 +57,13 @@ const trudel = [
         image:"./assets/Menu/OvomaltineBg5.webp", 
         price:15
     },
-    // {
-    //     flavour:"PAÇOQUITA",
-    //     span:"*EDIÇÃO LIMITADA JUNINA*",
-    //     description:'Recheado com um creme de paçoca "pra lá de bão!"',
-    //     image:"./assets/Menu/PacoquitaBg7.webp", 
-    //     price:15
-    // },
+    {
+        flavour:"PAÇOQUITA",
+        span:"*EDIÇÃO LIMITADA JUNINA*",
+        description:'Recheado com um creme de paçoca "pra lá de bão!"',
+        image:"./assets/Menu/PacoquitaMenu.webp", 
+        price:15
+    },
     {
         flavour:"KIT MINI TRUDEL",
         span:"6 mini Trudels nos sabores :",
@@ -260,4 +260,4 @@ const lightbox = {
 // Destaque de novidade com Lightbox e SetTimeout
 
 lightbox.open(false)
-setTimeout(lightbox.close, 5000);
+setTimeout(lightbox.close, 4000);
