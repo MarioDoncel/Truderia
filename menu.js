@@ -247,7 +247,7 @@ const lightbox = {
         lightbox.target.style.opacity = 1
         lightbox.target.style.top = 0
         lightbox.closeButton.style.top = 0
-        let source = e? e.target.src : './assets/Menu/Adicionais/morango.jpg'
+        let source = e? e.target.src : './assets/Menu/PacoquinhaGif.gif'
         lightbox.image.src = source
     },
     close(){
@@ -260,6 +260,4 @@ const lightbox = {
 // Destaque de novidade com Lightbox e SetTimeout
 
 lightbox.open(false)
-setTimeout(() => {
-    lightbox.close()
-}, 5000);
+setTimeout(lightbox.close, 5000);
