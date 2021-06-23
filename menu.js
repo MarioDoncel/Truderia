@@ -203,7 +203,7 @@ const menu = [
     }
 ]
     
-    
+// Populando o cardápio 
 const menuHtml = document.querySelector('#menu')
 menu.forEach(category => {
     let html = ''
@@ -237,16 +237,18 @@ menu.forEach(category => {
     menuHtml.innerHTML += html
 });
 
+
+// Lightbox 
 const lightbox = {
     target: document.querySelector('.lightbox-target'),
     image: document.querySelector('.lightbox-target img'),
     closeButton: document.querySelector('.lightbox-close'),
     open(e){
-        console.log('aqui')
         lightbox.target.style.opacity = 1
         lightbox.target.style.top = 0
         lightbox.closeButton.style.top = 0
-        lightbox.image.src = e.target.src
+        let source = e? e.target.src : './assets/Menu/Adicionais/morango.jpg'
+        lightbox.image.src = source
     },
     close(){
         lightbox.target.style.opacity = 0
@@ -254,3 +256,10 @@ const lightbox = {
         lightbox.closeButton.style.top = '-80px'
     }
 }
+
+// Destaque de novidade com Lightbox e SetTimeout
+
+lightbox.open(false)
+setTimeout(() => {
+    lightbox.close()
+}, 5000);
