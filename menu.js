@@ -58,7 +58,7 @@ const trudel = [
         price:15
     },
     {
-        flavour:"PAÇOQUITA",
+        flavour:"PAÇOQUITA CREMOSA",
         span:"*EDIÇÃO LIMITADA JUNINA*",
         description:'Recheado com um creme de paçoca "pra lá de bão!"',
         image:"./assets/Menu/PacoquitaMenu.webp", 

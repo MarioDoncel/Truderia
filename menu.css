@@ -163,6 +163,20 @@ main .menuItem .image.icecream img{
     text-align: center;
 }
 
+/* Edição limitada Pacoquita */
+@keyframes glow {
+    0% {text-shadow: 0px 0px 0px white;}
+    20% {text-shadow: 0px 0px 2px white;}
+    40% {text-shadow: 0px 0px 4px white;}
+    60% {text-shadow: 0px 0px 6px white;}
+    80% {text-shadow: 0px 0px 4px white;}
+    100% {text-shadow: 0px 0px 2px white;}
+}
+.category:nth-child(1) .menuItem:nth-child(10) span{
+    animation: glow 1s linear infinite;
+    color: #f8ca25;
+}
+
 
 /* ----- LIGHTBOX ------ */
 .lightbox-target {
