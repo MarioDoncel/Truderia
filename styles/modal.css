@@ -1,0 +1,82 @@
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden ;
+    z-index: 2;
+  }
+  .modalOverlay.active{
+    opacity: 1;
+    visibility: visible;
+    transition: 1000ms;
+  }
+  
+  .modal {
+    background: var(--principal);
+    border-radius: 10px;
+    position: relative;
+
+  }
+  .closeModal span{
+    cursor: pointer;
+    position: absolute;
+    background: #DA1E26;
+    font-weight: bold;
+    font-size: 16px;
+    color:white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    right:-15px;
+    top: 5px;
+    transform: rotate(45deg);
+    box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.8);
+    border: 1px solid black;
+  }
+  .closeModal.hide{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transform: scale(0);
+  }
+
+  #modalContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+
+  /* Normal or Mini   ---   Alerts */
+  #modalContent.alerts h3{
+    text-align: center;
+  }
+  #modalContent.alerts,
+  #modalContent.normalOrMini{
+    padding: 2rem;
+  }
+
+  #modalContent.alerts .buttons,
+  #modalContent.normalOrMini .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+  }
+
+  #modalContent.alerts button,
+  #modalContent.normalOrMini button{
+    padding: 8px 16px;
+    color:var(--principal);
+    cursor:pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: white;
+  }

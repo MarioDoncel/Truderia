@@ -6,41 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Truderia</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202219264-1">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-202219264-1');
+    </script>
+    <!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2635246206784602');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2635246206784602&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <meta name="facebook-domain-verification" content="lbyoz8xx399er0o00k5q9q8v3x5y9v" />
 </head>
 <body>
-    <div class="container">
-        <main class="flex-column">
-            <div class="logo">
-                <img src="./assets/LOGO.png" alt="">
-            </div>
-            <div class="links flex-column">
-                <a href="https://truderia.goomer.app/menu"><button type="button">DELIVERY - Faça seu pedido aqui!</button></a>
-                <a href="menu.html"><button type="button">Cardápio Online</button></a>
-            </div>
-            <div class="photos">
-                <div class="trudelPhoto">
-                    <img src="./assets/kit kat.jpg" alt="">
-                </div>
-                <div class="trudelPhoto">
-                    <img src="./assets/Chocolate e coco.jpg" alt="">
-                </div>
-                <div class="trudelPhoto">
-                    <img src="./assets/doce de leite.jpg" alt="">
-                </div>
-                <div class="trudelPhoto">
-                    <img src="./assets/Nutella.jpg" alt="">
-                </div>
-                <div class="trudelPhoto">
-                    <img src="./assets/Trudel Brigadeiro.jpg" alt="">
-                </div>
-                <div class="trudelPhoto">
-                    <img src="./assets/kit mini trudel.jpg" alt="">
-                </div>
-            </div>
-        </main>
+    <div class="background">
+        <div class="container">
+            <main class="flex-column">
+                <div class="logo">
+                    <img src="./assets/LogoRemoveBg.webp" alt="">
+                </div><!--logo-->
+    
+                <div class="links flex-column">
+                    <a href="https://api.whatsapp.com/send?phone=5519996929909"><button type="button">WHATSAPP - <span>Dúvidas? Fale conosco!</span> </button></a>
+                    <a href="menu.html"><button type="button">CARDÁPIO E PEDIDOS</button></a>
+                </div><!--links-->
+            </main>
+        </div>
     </div>
+    
     <footer class="flex-column">
         <div class="textFooter">
             <h2>CONTATO E MÍDIAS SOCIAIS</h2>
@@ -50,8 +62,10 @@
             <a href="https://www.instagram.com/truderia/"><img src="./assets/instagram.png" alt=""></a>
             <a href="https://www.facebook.com/TruderiaAraras"><img src="./assets/facebook.png" alt=""></a>
         </div>
-        <div class="credits">Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="credits">
+            Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a>
+        </div>
     </footer>
-    <script src="./index.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

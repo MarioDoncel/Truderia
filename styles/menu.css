@@ -1,0 +1,371 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+.container{
+    max-width: 1000px;
+    width: 90%;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+body {
+    background-image: url('../assets/menuBackground.webp');
+    background-size:cover;
+}
+
+/* --------- HEADER ----------- */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+hr{
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid var(--text);
+    opacity: 30%;
+    margin-bottom: 1rem;
+    transition: 400ms ease-in-out;
+}
+
+header .logo{
+    margin: 10px 0 ;
+    width: 90%;
+    
+}
+header .menu{
+    align-self:flex-start;
+    width: 13%;
+    margin-left: 2%;
+    height:150px;
+    background-color: #3C3B3B;
+    border-radius: 0 0 15px 15px;
+}
+
+/* ------ CATEGORY ---------- */
+.category{
+    margin-bottom: 1.5rem;
+    
+}
+.category.heightZero{
+    height: 20px;
+}
+.categoryName{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+    cursor: pointer;
+    
+}
+.categoryName h3{
+    margin-left: 1rem;
+    font-weight: 500;
+    letter-spacing:12px;
+    font-size: 36PX;
+    font-family: 'Roboto Slab', sans-serif;
+}
+.categoryName i{
+    font-size: 54px;
+    text-align: center;
+    transition: 400ms ease-in-out
+}
+.categoryName h3,
+.categoryName i{
+    color: var(--text);
+}
+
+/*------- ITEM MENU-------- */
+.menuItem {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    transition: 400ms ease-in-out;
+    transform: scale(1);
+}
+main .menuItem .image{ 
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0);
+    width:100%
+}
+
+main .menuItem .image img{ 
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    cursor:zoom-in;
+}
+main .menuItem .image.promotion,
+main .menuItem .image.trudel{
+    width: 300px;
+    height: 200px;
+}
+main .menuItem .image.promotion img,
+main .menuItem .image.trudel img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 15px;
+}
+main .menuItem .image.additional{
+    width: 105px;
+    height: 80px;
+}
+main .menuItem .image.additional img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+main .menuItem .image.icecream{
+    width: 300px;
+    height:200px;
+}
+main .menuItem .image.icecream img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+main .menuItem .image.drinks{
+    width: 250px;
+    height:250px;
+}
+main .menuItem .image.drinks img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.menuItem .item {
+    margin-left: 0.5rem;
+    align-items:flex-start ;
+    height: 200px;
+    
+}
+.menuItem .item.flex-column{
+    justify-content: space-around;
+    max-width: 50%;
+    width: 100%;
+}
+.menuItem .item.flex-column.typeadditional{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    max-width: 100%;
+    height: 100%;
+}
+.menuItem .item .itemName p{
+    font-size: 26px;
+    line-height: 26px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+
+}
+.menuItem .item .itemName span {
+    line-height: 14px;
+    font-size: 14px;
+}
+.menuItem .item .description{
+    margin-left: 0.5rem;
+}
+.menuItem .item .description p{
+    font-size: 18px;
+    text-shadow: none;
+}
+
+.menuItem .priceAndAddCart{
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.menuItem .price.flex-column{
+    align-items: start;
+}
+.menuItem .price{
+    font-size: 32px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+.menuItem .price span{
+    font-size: 24px;
+}
+
+.menuItem .price p.mini,
+.menuItem .price p.mini span{
+    font-size: 14px;
+}
+
+.menuItem .priceAndAddCart button{
+    padding: 8px 16px;
+    color: var(--principal);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.category .hide{
+    visibility:hidden;
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    transform: scale(0);
+    transition: 400ms ease-in-out;
+}
+.category .rotate{
+    display: inline-block;
+    transform: rotate(-90deg);
+    transition: 400ms ease-in-out
+}
+
+/* Edição limitada Pacoquita */
+@keyframes glow {
+    0% {text-shadow: 0px 0px 0px white;}
+    20% {text-shadow: 0px 0px 4px white;}
+    40% {text-shadow: 0px 0px 6px white;}
+    60% {text-shadow: 0px 0px 6px white;}
+    80% {text-shadow: 0px 0px 4px white;}
+    100% {text-shadow: 0px 0px 0px white;}
+}
+
+/* Novo Sabor LAKAOREO */
+.category:nth-child(1) .menuItem:nth-child(10) span{
+    /* animation: glow 1s linear infinite;
+    color: rgb(144, 201, 255 ); */
+}
+
+/* ----- LIGHTBOX ------ */
+.lightbox-target {
+    position: fixed;
+    width: 100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    z-index: 100;
+    left: 0;
+    top: -100%;
+    opacity: 0;
+    transition: 400ms ease-in-out;
+}
+
+.lightbox-target img{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--principal);
+    box-shadow: 0 0 8px -8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+a.lightbox-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -0px;
+    color: black;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+}
+
+
+
+/*----- RESPONSIVE ------ */
+
+
+@media  (max-width:650px){
+    .menuItem .item.flex-column {
+        max-width: 200px;
+    }
+    .menuItem .priceAndAddCart button{
+        padding: 4px 8px;
+    }
+}
+@media  (max-width:400px){
+    .menuItem .item.flex-column {
+        max-width: 180px;
+    }
+    .menuItem .item.kitmini{
+        height: 125px;
+    }
+}
+@media  (max-width:650px){
+   
+    header .logo {
+        min-width: 150px;
+    }
+    .categoryName h3{
+        margin-left: 1rem;
+        font-weight: 500;
+        letter-spacing:0.2rem;
+        font-size: 24PX;
+    }
+    .categoryName i{
+        font-size: 54px;
+        text-align: center;
+    }
+    .menuItem .item {
+        height: 100px;
+    }
+    main .menuItem .image.promotion,
+    main .menuItem .image.trudel{
+        width: 150px;
+        height:100px;
+    }
+    
+    main .menuItem .image.additional{
+        width: 90px;
+        height: 60px;
+    }
+    main .menuItem .image.icecream{
+        width: 150px;
+        height:100px;
+    }
+    main .menuItem .image.drinks{
+        width: 125px;
+        height:125px;
+    }
+    .menuItem .item .itemName p{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .menuItem .item .itemName p span{
+        font-size: 10px;
+        line-height: 10px;
+    }
+    
+    .menuItem .item .description p{
+        font-size: 10px;
+    }
+   
+    .menuItem .price p{
+        font-size: 20px;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);  
+    }
+
+    .menuItem .price span{
+        font-size: 14px;
+    }
+
+    .menuItem .price p.mini,
+    .menuItem .price p.mini span{
+        font-size: 12px;
+    }
+    
+}

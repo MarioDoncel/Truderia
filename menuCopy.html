@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+    <!-- <link rel="stylesheet" href="./styles/map.css"> -->
     <title>Truderia</title>
     <!-- Facebook Pixel Code -->
 <script>
@@ -30,10 +33,14 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2635246206784602&ev=PageView&noscript=1"
     /></noscript>
+    
     <!-- End Facebook Pixel Code -->
+    
 </head>
 <body>
     
+<!-- CONTAINER --> 
+
     <div class="container">
         <header>
             <div class="logo">
@@ -41,11 +48,14 @@
             </div>  
         </header>
 
+    <!-- MENU -->
+        
         <main id="menu">
-            
-
         </main>
-    </div> <!-- container -->
+
+    </div> 
+
+<!-- FOOTER -->
 
     <footer class="flex-column">
         <div class="textFooter">
@@ -59,6 +69,8 @@
         <div class="credits">Ícones feitos por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
 
+<!-- LIGHTBOX -->
+    
     <div class="lightbox-target">
         <img src="" alt="">
         <a href="#" class="lightbox-close" onclick="lightbox.close()">
@@ -66,8 +78,44 @@
         </a>
     </div>
 
+<!-- MODAL OVERLAY -->
+
+
+    <div class="modalOverlay ">
+        <div class="modal" >
+            <div  id="modalContent" class="">
+            </div>  
+            <div class="closeModal">
+                <span onclick="modalClose()">Cancelar</span>
+            </div>
+
+        </div>
+    </div>
+
+<!-- VIEW -->
+
+    <div id="view" class="">
+    </div>
+
+<!-- FIXED CART -->
+
+    <div class="fixedCart" onclick="openView(showCartHtml(JSON.parse(localStorage.getItem('cart'))), 'showCart' )">
+    </div>
+    <div id="map"></div>
+
+<!-- SCRIPTS -->
+
     <script src="./scripts/data.js"></script>
+    <script src="./scripts/dataDistrict.js"></script>
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/menuCopy.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/geolocation.js"></script>
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrwJ_BU1Xir1zpM6wscD5se-kzq3DIQRw&callback=&libraries=places&v=weekly"
+      async defer
+    ></script>
 </body>
 </html>

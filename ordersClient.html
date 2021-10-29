@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/ordersClient.css">
+    <title>Truderia</title>
+</head>
+<body>
+    <header class="center">
+        <div class="logo">
+            <img src="./assets/LogoRemoveBg.webp" alt="">
+        </div><!--logo-->
+        <h1>GERENCIADOR DE PEDIDOS</h1>
+    </header>
+    <div class="container">
+        <main>
+            <div class="orderPrint" >
+                <div class="inputItem" id="name">
+                    <label for="name">NOME:</label>
+                    <input name="name" type="text">
+                </div><!--name-->
+                <div class="inputItem" id="phone">
+                    <label for="phone">TELEFONE:</label>
+                    <input name="phone" type="text">
+                </div><!--phone-->
+                <div class="inputItem" id="address">
+                    <label for="address">ENDEREÇO:</label>
+                    <input name="address" type="text">
+                </div><!--address-->
+                <div class="inputItem" id="district">
+                    <label for="district">BAIRRO:</label>
+                    <div class="autocomplete">
+                        <input id="selectDistrict" name="district" type="text" oninput="searchDistricts()" onchange="addDeliveryTax()">
+                        <ul>
+                        </ul>
+                    </div>
+                </div><!--district-->
+                <div class="inputItem" id="note">
+                    <label for="note">OBSERVAÇÃO:</label>
+                    <textarea name="note" id="" cols="30" rows="2">
+                    </textarea>
+                </div><!--note-->
+                <div class="inputItem" id="order">
+                    <label for="order">PEDIDO</label>
+                    <input name="order" type="hidden">
+                    <div id="orderTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>QTD</th>
+                                    <th colspan="1" style="padding: 0 6px;">CATEGORIA</th>
+                                    <th colspan="3" >ITEM</th>
+                                    <th>VALOR(R$)</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                            <tfoot>
+                                <tr id="total" class="hidden">
+                                    <td class="total" colspan="6"><strong>Total</strong></td>
+                                    <td class="total" id="totalValue"><strong>0</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table><!--table-->
+                        <div class="orderTotal">
+                            <h3>Total</h3>
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div id="paymentChosed">
+                    </div>
+                </div><!--order-->
+                 
+            </div><!--orderPrint-->
+
+            <div class="selections flex-column">
+                <div class="items flex-column">
+                    <button type="button" id="trudel" onclick="openOptions(this)">TRUDEL</button>
+                    <button type="button" id="adittional" onclick="openOptions(this)">ADICIONAL</button>
+                    <button type="button" id="icecream" onclick="openOptions(this)">SORVETE</button>
+                    <button type="button" id="promotion" onclick="openOptions(this)">PROMOCAO</button>
+                    <div class="choices">
+                    </div><!--choices-->
+                </div><!--items-->
+                <div class="conclusion flex-column">
+                    <button type="button" id="payment" onclick="paymentOptions(this)">FORMA DE PAGAMENTO</button>
+                    <button type="button" id="endOrder" onclick="endOrder()">ENVIAR PEDIDO</button>
+                </div>
+            </div><!--selections-->
+            
+        </main>
+    </div>
+    
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/dataDistrict.js"></script>
+    <script src="./scripts/ordersClient.js"></script>
+</body>
+</html>

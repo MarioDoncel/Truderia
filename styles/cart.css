@@ -1,0 +1,444 @@
+/* FooterCart */
+
+.fixedCart {
+    position: fixed;
+    width: 100%;
+    background-color: var(--principal);
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+    transform: scale(0);
+}
+
+.fixedCart h3{
+    display: inline-block;
+    position: relative;
+}
+.fixedCart h3 span {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    font-size: 12px;
+    background-color: rgb(209, 12, 5);
+    /* color: black; */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-weight: normal;
+}
+
+/* hide menu */
+
+.hideMenu {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+/* View */
+#view {
+    opacity: 0;
+    visibility:hidden;
+}
+#view.active{
+    opacity: 1;
+    visibility:visible;
+    transition: 1000ms;
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    min-height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.closeView {
+    position: fixed;
+    top: 0;
+    margin: 8px;
+}
+.closeView span{
+    cursor: pointer;
+    color: white;
+    background: #DA1E26;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* Select Item */
+
+#view.selectItem {
+    
+}
+
+.selectItem .image{
+    max-height: 30vh;
+    width: 100%;
+}
+
+.selectItem .image img{
+    max-height: 30vh;
+    width: 100%;
+    object-fit:cover;
+}
+
+.selectItem .description h1,
+.selectItem .description p{
+    color: black;
+    padding: 16px 8px;
+}
+
+.selectItem .addToOrder {
+    width: 100%;
+    
+}
+.selectItem .addToOrder .title{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: var(--principal);
+}
+.selectItem .addToOrder .image{
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.selectItem .addToOrder .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.selectItem .addToOrder .options{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto ;
+}
+.selectItem .addToOrder .options .input{
+    padding: 4px;
+    display: grid;
+    grid-template-columns: 70px 45px 1fr 80px;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.selectItem .addToOrder .options .input p,
+.selectItem .addToOrder .options label {
+    color: black;
+}
+.selectItem .addToOrder .options .input .quantity{
+    justify-self: flex-start;
+    margin-left: 5px;
+}
+.selectItem .addToOrder .options .input .quantity i,
+.selectItem .addToOrder .options .input .quantity span{
+    color: black;
+}
+.selectItem .addToOrder textarea{
+    width: calc(100% - 12px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    height: 150px;
+    margin: 8px 6px;
+    border-radius: 4px;
+    padding: 6px;
+}
+.selectItem .addToOrder textarea:focus-within{
+    border: 2px solid var(--principal);
+    
+}
+
+.selectItem .total{
+    margin-top: auto;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.selectItem .total .value{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    cursor: pointer;
+    background-color: rgb(2, 168, 2);
+    box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+}
+.selectItem .total .quantity{
+    background-color: var(--principal);
+    flex-direction: column;
+}
+.selectItem .total .quantity .plusMinus{
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+
+.selectItem .total .quantity,
+.selectItem .total .value{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, .2);
+    padding: 16px 24px;
+    border-radius: 4px;
+    
+}
+.selectItem .total .value span,
+.selectItem .total .quantity span,
+.selectItem .total .quantity i{
+    color: white;
+}
+.selectItem .quantity span{
+    margin: 0 8px;
+}
+.selectItem  .quantity i {
+    cursor: pointer;
+}
+
+
+
+/* Cart Show */
+.showCart p,
+.showCart h4,
+.showCart span,
+.showCart div{
+    color: black;
+}
+.showCart .cartResume{
+    background-color: var(--principal);
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showCart .cartSections{
+    margin: 16px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 12px;
+}
+.showCart .cartSections .section{
+    background-color: var(--principal);
+    width: 100%;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.showCart .cartItems,
+.showCart .totalItems {
+    width: 100%;
+}
+
+.showCart .cartItems .item{
+    display: grid;
+    grid-template-columns: 15px 50px 1fr 60px 20px;
+    gap: 4px;
+    padding: 8px 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+}
+.showCart .cartItems .item .flavourAndAdd .add{
+    font-size: 12px;
+}
+.showCart .cartItems .item i{
+    color: crimson;
+    cursor: pointer;
+}
+
+.showCart .buyMore {
+    background-color: rgb(2, 168, 2);
+    width: 100%;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0 0 12px 12px;
+    color: white;
+}
+
+.showCart .buyerData,
+.showCart .deliveryMethod,
+.showCart .payment {
+    width: 100%;
+}
+.showCart .input,
+.showCart .select{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+}
+.showCart .input .field,
+.showCart .select .field{
+    padding: 4px 8px;
+}
+.showCart .input input,
+.showCart .select option,
+.showCart .select select{
+    margin:0 14px ;
+    color: black;
+    padding:8px 8px;
+    border-radius: 4px;
+    border: 2px solid rgba(0, 0, 0, .2);
+}
+
+.showCart .input input:focus-within,
+.showCart .select option:focus-within,
+.showCart .select select:focus-within{
+    border: 2px solid rgba(97, 0, 0, 1);
+    transition: 300ms ease-in-out;
+}
+
+.deliveryMethod .deliveryOptions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 8px 0;
+}
+.deliveryMethod .deliveryOptions > div{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 6px;
+    width: 120px;
+    padding: 6px;
+    border: 1px solid rgba(53, 53, 53, 0.2);
+    border-radius: 8px;
+    background-color: rgb(248, 247, 247);
+    box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: 300ms;
+    transition-property: box-shadow;
+}
+
+.deliveryMethod .deliveryOptions > div.box-shadow-none{
+    box-shadow: none;
+}
+.deliveryMethod .deliveryOptions > div p{
+    color: black;
+}
+.payment .pixSelected,
+.deliveryMethod .deliverySelected,
+.deliveryMethod .takeAwaySelected{
+    margin: 16px 0px;
+
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+.payment .pixSelected.hide,
+.deliveryMethod .deliverySelected.hide,
+.deliveryMethod .takeAwaySelected.hide,
+.showCart .payment .input.hide{
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    display: none;
+}
+
+.payment .pixSelected h4,
+.payment .pixSelected p,
+.payment .pixSelected span,
+.deliveryMethod .deliverySelected h4,
+.deliveryMethod .takeAwaySelected h4,
+.deliveryMethod .takeAwaySelected span,
+.deliveryMethod .takeAwaySelected p{
+    display: block;
+    text-align: center;
+    margin-top: 2px;
+}
+.payment .pixSelected span,
+.deliveryMethod .takeAwaySelected span {
+    font-size: 12px;
+}
+
+.grid2 {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cartSections .field span{
+    font-size: 12px;
+}
+.showCart .totalItems .item.total,
+.showCart .totalItems .item .deliveryTax,
+.showCart .totalItems .item .subValue{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px;
+}
+
+.showCart .totalItems .item:first-child{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.showCart #cartSendWhats{
+    margin-top: auto;
+    background-color: rgb(2, 168, 2);
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.showCart .closeView span{
+    color: white;
+}
+.pac-container .pac-item span{
+    color: black;
+}
+
+@media  (min-width:650px){
+    .selectItem .addToOrder .options .input{
+        grid-template-columns: 150px 90px 1fr 160px;
+        padding: 8px 10%;
+    }
+    .selectItem .addToOrder .image {
+        width: 90px;
+        height: 90px;
+    }
+    .showCart .cartSections {
+        margin: 32px auto;
+    }
+    .showCart .cartItems .item {
+        grid-template-columns: 30px 100px 1fr 120px 40px
+    }   
+    .deliveryMethod .deliveryOptions > div {
+        width: 240px;
+        height: 160px;
+    }
+    .payment .pixSelected span, .deliveryMethod .takeAwaySelected span{
+        font-size: 16px;
+    }
+    .selectItem .total .quantity, .selectItem .total .value {
+        padding: 32px 48px;
+    }
+    .selectItem .total .quantity .plusMinus {
+        margin-top: 12px;
+    }
+   
+}
