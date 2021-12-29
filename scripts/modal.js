@@ -1,12 +1,12 @@
 const modalOverlay = document.querySelector('.modalOverlay')
 const modalContent = document.querySelector('#modalContent')
 
-function modalOpen(content, contentClass) {
+window.modalOpen = (content, contentClass) => {
     modalOverlay.classList.add('active')
     modalContent.classList.add(contentClass)
     modalContent.innerHTML = content
 }
-function alertOpen(content, contentClass, pageHeight) {
+window.alertOpen = (content, contentClass, pageHeight) => {
     modalOverlay.classList.add('active')
     modalContent.classList.add(contentClass)
     modalContent.innerHTML = `
@@ -17,14 +17,14 @@ function alertOpen(content, contentClass, pageHeight) {
     document.querySelector('.closeModal').classList.add('hide')
     window.scrollTo(0,document.querySelector(pageHeight).scrollHeight)
 }
-function modalClose() {
+window.modalClose = () => {
     modalOverlay.classList.remove('active')
     modalContent.removeAttribute("class")
     document.querySelector('.closeModal').classList.remove('hide')
     modalContent.innerHTML = ""
     loadFixedCart()
 }
-function alertClose() {
+window.alertClose = () => {
     modalOverlay.classList.remove('active')
     modalContent.removeAttribute("class")
     document.querySelector('.closeModal').classList.remove('hide')

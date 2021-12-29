@@ -1,4 +1,4 @@
-const districts = [
+ const districts = [
     {
         name: 'Centro',
         price: 4
@@ -500,7 +500,7 @@ const districts = [
         price: 7
     },
     {
-        name: 'Conjunto Residencial Prefeito Warley Colombini   ',
+        name: 'Conjunto Residencial Prefeito Warley Colombini',
         price: 7
     },
     {
@@ -643,5 +643,11 @@ const districts = [
         name: 'Samantha',
         price: 7
     },
+    {
+        name: 'Jardim Vida Nova',
+        price: 7
+    },
 
 ]
+
+export default districts

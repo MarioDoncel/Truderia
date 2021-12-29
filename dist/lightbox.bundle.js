@@ -1,0 +1,2 @@
+(()=>{const t={target:document.querySelector(".lightbox-target"),image:document.querySelector(".lightbox-target img"),closeButton:document.querySelector(".lightbox-close"),open(e){t.target.style.opacity=1,t.target.style.top=0,t.closeButton.style.top=0;let o=e?e.target.src:"./assets/Menu/lightboxThursdayCombination.webp";t.image.src=o},close(){t.target.style.opacity=0,t.target.style.top="-100%",t.closeButton.style.top="-80px"}}})();
+//# sourceMappingURL=lightbox.bundle.js.map

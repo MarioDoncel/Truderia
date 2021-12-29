@@ -1,0 +1,2 @@
+(()=>{"use strict";window.transformToRealBRL=e=>e.toLocaleString("pt-br",{style:"currency",currency:"BRL"}),window.Mask={apply(e,r){setTimeout((function(){e.value=Mask[r](e.value)}),1)},formatBRL:e=>(e=e.replace(/\D/g,""),new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(e/100)),zipCodeBRL:e=>e.replace(/\D/g,"").replace(/^(\d{5})(\d{3})/,"$1-$2"),telephoneBRL:e=>e.replace(/\D/g,"").replace(/^(\d{2})(\d)/g,"($1) $2").replace(/(\d)(\d{4})$/,"$1-$2")}})();
+//# sourceMappingURL=utils.bundle.js.map

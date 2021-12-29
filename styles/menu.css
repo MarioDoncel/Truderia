@@ -70,15 +70,24 @@ header .menu{
     letter-spacing:12px;
     font-size: 36PX;
     font-family: 'Roboto Slab', sans-serif;
+    
+}
+.category:last-child .categoryName h3{
+    line-height: 22px;
 }
 .categoryName i{
     font-size: 54px;
     text-align: center;
     transition: 400ms ease-in-out
 }
+.categoryName h3 small,
 .categoryName h3,
 .categoryName i{
     color: var(--text);
+}
+.categoryName h3 small{
+    letter-spacing:2px;
+    font-size: 18px;
 }
 
 /*------- ITEM MENU-------- */
@@ -104,22 +113,32 @@ main .menuItem .image img{
     object-fit:cover;
     cursor:zoom-in;
 }
+main .menuItem .image.savoryTrudel,
+main .menuItem .image.fingers,
+main .menuItem .image.rings,
 main .menuItem .image.promotion,
+main .menuItem .image.christmasTrudel,
 main .menuItem .image.trudel{
     width: 300px;
     height: 200px;
 }
+main .menuItem .image.fingers img,
+main .menuItem .image.rings img,
 main .menuItem .image.promotion img,
+main .menuItem .image.christmasTrudel img,
+main .menuItem .image.savoryTrudel img,
 main .menuItem .image.trudel img{
     width: 100%;
     height: 100%;
     object-fit:cover;
     border-radius: 15px;
 }
+main .menuItem .image.savoryAdditional,
 main .menuItem .image.additional{
     width: 105px;
     height: 80px;
 }
+main .menuItem .image.savoryAdditional img,
 main .menuItem .image.additional img{
     width: 100%;
     height: 100%;
@@ -157,6 +176,7 @@ main .menuItem .image.drinks img{
     max-width: 50%;
     width: 100%;
 }
+.menuItem .item.flex-column.typesavoryAdditional,
 .menuItem .item.flex-column.typeadditional{
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -175,11 +195,17 @@ main .menuItem .image.drinks img{
     font-size: 14px;
 }
 .menuItem .item .description{
-    margin-left: 0.5rem;
+    
+    text-indent: 1rem;
 }
 .menuItem .item .description p{
+    margin: 2px 0;
     font-size: 18px;
     text-shadow: none;
+}
+
+.menuItem .item .description p small {
+    font-size: 12px;
 }
 
 .menuItem .priceAndAddCart{
@@ -316,23 +342,31 @@ a.lightbox-close {
         letter-spacing:0.2rem;
         font-size: 24PX;
     }
+    .categoryName h3 small{
+        font-size: 14px;
+    }
     .categoryName i{
         font-size: 54px;
         text-align: center;
     }
     .menuItem .item {
-        height: 100px;
+        height: 100%;
     }
+    main .menuItem .image.savoryTrudel,
+    main .menuItem .image.christmasTrudel,
+    main .menuItem .image.rings,
     main .menuItem .image.promotion,
     main .menuItem .image.trudel{
         width: 150px;
         height:100px;
     }
     
+    main .menuItem .image.savoryAdditional,
     main .menuItem .image.additional{
         width: 90px;
         height: 60px;
     }
+    main .menuItem .image.fingers,
     main .menuItem .image.icecream{
         width: 150px;
         height:100px;
@@ -351,7 +385,10 @@ a.lightbox-close {
     }
     
     .menuItem .item .description p{
-        font-size: 10px;
+        font-size: 11px;
+    }
+    .menuItem .item.typefingers .description p{
+        font-size: 11px;
     }
    
     .menuItem .price p{

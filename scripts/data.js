@@ -173,6 +173,82 @@ const additional = [
 
 ]
 
+const savoryTrudel = [
+    {
+        flavour: "TRADICIONAL",
+        span: "",
+        description: "Nossa deliciosa massa romena assada, na versão salgada, com uma casca crocante de queijo parmesão e um mix de ervas. Uma experiência única de sabor!",
+        image: "./assets/Menu/Savory/Tradicional.webp",
+        price: 9
+    },
+    {
+        flavour: "FRANGO",
+        span: "",
+        description: "Frango desfiado com especiarias. Recheio cremoso, simplesmente delicioso!",
+        image: "./assets/Menu/Savory/Frango.webp",
+        price: 13
+    },
+    {
+        flavour: "FRANGO COM CATUPIRY",
+        span: "",
+        description: "Nosso delicioso recheio de frango com Catupiry original. Combinação mais que perfeita!",
+        image: "./assets/Menu/Savory/FrangoCatupiry.webp",
+        price: 14
+    },
+    {
+        flavour: "FRANGO COM CHEDDAR",
+        span: "",
+        description: "Nosso delicioso recheio de frango com Cheddar cremoso. Essa combinação é sucesso garantido!",
+        image: "./assets/Menu/Savory/FrangoCheddar.webp",
+        price: 14
+    },
+    {
+        flavour: "ALHO PORÓ",
+        span: "",
+        description: "Recheio de requeijão cremoso sabor Alho Poró. Suave, sofisticado e surpreendente.",
+        image: "./assets/Menu/Savory/AlhoPoro.webp",
+        price: 15
+    },
+    {
+        flavour: "4 QUEIJOS",
+        span: "",
+        description: "Recheio de requeijão cremoso sabor 4 Queijos. A junção do sabor do Catupiry, parmesão, gorgonzola e provolone. Perfeito para aqueles que adoram queijos!",
+        image: "./assets/Menu/Savory/QuatroQueijos.webp",
+        price: 15
+    }
+]
+
+const savoryAdditional = [
+    {
+        flavour: "ALHO FRITO",
+        span: "",
+        description: "",
+        image: "./assets/Menu/AdicionaisSalgados/AlhoFrito.webp",
+        price: 1
+    },
+    {
+        flavour: "MILHO",
+        span: "",
+        description: "",
+        image: "./assets/Menu/AdicionaisSalgados/Milho.webp",
+        price: 1
+    },
+    {
+        flavour: "BATATA PALHA",
+        span: "",
+        description: "",
+        image: "./assets/Menu/AdicionaisSalgados/BatataPalha.webp",
+        price: 1.5
+    },
+    {
+        flavour: "PARMESÃO RALADO",
+        span: "",
+        description: "",
+        image: "./assets/Menu/AdicionaisSalgados/ParmesaoRalado.webp",
+        price: 2
+    }
+]
+
 const iceCream = [
     {
         flavour: "CREME",
@@ -218,6 +294,75 @@ const iceCream = [
     }
 ]
 
+const trudelRings = [
+    {
+        flavour: "RINGS FIVE",
+        span: "(5 unidades)",
+        description: `Nossa deliciosa massa romena em formato de anéis, perfeitos para compartilhar e para aquele lanchinho rápido! <br><br>
+        *Acrescente seu recheio preferido para acompanhar seus rings.`,
+        image: "./assets/Menu/Rings/Rings5.webp",
+        price: 7,
+    },
+    {
+        flavour: "RINGS TEN",
+        span: "(10 unidades)",
+        description: `Nossa deliciosa massa romena em formato de anéis, perfeitos para compartilhar e para aquele lanchinho rápido! <br><br>
+        *Acrescente seu recheio preferido para acompanhar seus rings.`,
+        image: "./assets/Menu/Rings/Rings10.webp",
+        price: 10,
+    },
+]
+
+
+const stuffingPots = {
+    name: "POTES DE RECHEIO",
+    category:"stuffingPots",
+    items: [
+        {
+            flavour: "BRIGADEIRO",
+            span: "",
+            description: "",
+            image: "./assets/Menu/Potes/poteBrigadeiro.webp",
+            price: 4,
+        },
+        {
+            flavour: "DOCE DE LEITE",
+            span: "",
+            description: "",
+            image: "./assets/Menu/Potes/PoteDoceDeLeite.webp",
+            price: 4,
+        },
+        {
+            flavour: "KITKAT CREMOSO",
+            span: "",
+            description: "",
+            image: "./assets/Menu/Potes/poteKitkat.webp",
+            price: 5,
+        },
+        {
+            flavour: "NUTELLA",
+            span: "",
+            description: "",
+            image: "./assets/Menu/Potes/poteNutella.webp",
+            price: 5,
+        },
+        {
+            flavour: "OVOMALTINE",
+            span: "",
+            description: "",
+            image: "./assets/Menu/Potes/poteOvomaltine.webp",
+            price: 5,
+        },
+        {
+            flavour: "LAKAOREO",
+            span: "",
+            description: "",
+            image: "./assets/Menu/Potes/PoteLakaOreo.webp",
+            price: 5,
+        },
+    ]
+}
+
 const drinks = [
     {
         flavour: "ÁGUA",
@@ -257,31 +402,6 @@ const drinks = [
     
 ]
 
-const menuView = [
-    {
-        name: "TRUDELS",
-        category: "trudel",
-        items: trudel
-    },
-    {
-        name: "SORVETES",
-        category: "icecream",
-        items: iceCream
-    },
-    {
-        name: "ADICIONAIS",
-        category: "additional",
-        items: additional
-    },
-    {
-        name: "BEBIDAS",
-        category: "drinks",
-        items: drinks
-    }
-]
-
-// Full-Menu data 
-
 const miniTrudel = 
     {
         name: "MINI-TRUDELS",
@@ -291,7 +411,7 @@ const miniTrudel =
                 flavour:filtered.flavour,
                 price:filtered.miniPrice,
                 description:filtered.description,
-                image:filtered.image
+                image:filtered.image.replace('Trudels', 'MiniTrudels')
             }
         })
     }
@@ -310,23 +430,23 @@ const miniAdd =
         })
     }
 
-const promotion = {
-    name: "COMBINAÇÃO DA QUINTA",
+export const promotion = {
+    name: "COMBO DA QUINTA",
     category:"promotion",
     items: [
             {
                 value:"COMBINAÇÃO DA QUINTA",
-                flavour: "NUTELLA + AMENDOIM + MORANGO",
-                description: "COLOCAR DESCRIÇÃO",
+                flavour: "TAMANHO NORMAL",
+                description: "Delicioso Trudel de Nutella com adicional de Amendoim Picado e sorvete Ninho Trufado por um preço especial!",
                 image: "./assets/Menu/Promotion/thursdayCombination.webp",
-                price: 16,
+                price: 15.50,
             },
             {
                 value:"MINI-COMBINAÇÃO DA QUINTA",
-                flavour: "MINI-NUTELLA + MINI-AMENDOIM + MINI-MORANGO",
-                description: "COLOCAR DESCRIÇÃO",
+                flavour: "TAMANHO MINI",
+                description: "Delicioso Trudel de Nutella com adicional de Amendoim Picado e sorvete Ninho Trufado por um preço especial!",
                 image: "./assets/Menu/Promotion/thursdayCombination.webp",
-                price: 11.5,
+                price: 11.50,
             },
         // {
         //     value:"MINI PROMOCAO",
@@ -377,9 +497,105 @@ const promotion = {
     ]
 }
 
-// menuView.unshift(promotion)
+export const christmasTrudel = {
+    name: "ESPECIAL DE NATAL",
+    category:"christmasTrudel",
+    items: [
+        {
+            flavour: "TRUDELTTONE",
+            description: "Nossa deliciosa e exclusiva massa romena, com um recheio muito especial de Natal: brigadeiro branco sabor panetone e frutas cristalizadas!",
+            image: "./assets/Menu/Christmas/Trudeltone.webp",
+            price: 16,
+            miniPrice:12
+        },
+        {
+            flavour: "TRUDELTTONE GOTAS",
+            description: "Nosso recheio especial de Natal na versão com chocolate: brigadeiro branco sabor chocotone com gotas de chocolate!",
+            image: "./assets/Menu/Christmas/TrudeltoneGotas.webp",
+            price: 16,
+            miniPrice:12
+        },
+    ]
+}
 
-const entregas = {
+const miniChristmas = 
+{
+    name: "MINI-ESPECIAL DE NATAL",
+    category: "miniChristmasTrudel",
+    items:christmasTrudel.items.filter(item =>item.miniPrice).map(filtered=> {
+        return {
+            flavour:filtered.flavour,
+            price:filtered.miniPrice,
+            description:filtered.description,
+            image:filtered.image
+        }
+    })
+}
+
+
+export const menuView = [
+    christmasTrudel,
+    // promotion,
+    {
+        name: "TRUDELS",
+        category: "trudel",
+        items: trudel
+    },
+    {
+        name: "TRUDELS SALGADOS",
+        category: "savoryTrudel",
+        items: savoryTrudel
+    },
+    {
+        name: "TRUDEL RINGS",
+        category: "rings",
+        items: trudelRings
+    },
+    {
+        name: "SORVETES",
+        category: "icecream",
+        items: iceCream
+    },
+    {
+        name: "ADICIONAIS",
+        category: "additional",
+        items: additional
+    },
+    
+    {
+        name: "ADICIONAIS SALGADOS",
+        category: "savoryAdditional",
+        items: savoryAdditional
+    },
+    {
+        name: "BEBIDAS",
+        category: "drinks",
+        items: drinks
+    },
+    {
+        name: "TRUDEL FINGERS <br> <small>(EVENTOS/FESTAS/PRESENTE)</small>",
+        category: "fingers",
+        items: [
+            {
+            flavour: "TRUDEL BOX",
+            span: "",
+            description: 'Linda caixa de presente com 9 unidades dos nossos deliciosos Trudel Fingers. Personalize como desejar, escolha os sabores e adicionais.<br><br> <small>* Apenas encomendas.<br>(2 dias de antecedência)</small>',
+            image: "./assets/Menu/Fingers/trudelBox.webp",
+            price: 50
+            },
+            {
+            flavour: "EVENTOS / FESTAS",
+            span: "",
+            description: 'Nossos irresistíveis trudels, no tamanho ideal (35 gramas) para surpreender seus convidados e deixar sua mesa de doces simplesmente maravilhosa em seu evento.<br><br> <small>* Apenas encomendas.<br>(1 semana de antecedência)</small>',
+            image: "./assets/Menu/Fingers/fingers.webp",
+            price: '**Sob Consulta'
+            },
+        ]
+    },
+    
+]
+
+export const entregas = {
     name: "ENTREGAS",
     category:"delivery",
     items: [
@@ -416,14 +632,16 @@ const entregas = {
 ]
 }
 
-const menu = [
+export const menu = [
     ...menuView, 
     miniTrudel,
+    miniChristmas,
     miniAdd,
+    stuffingPots,
     promotion,
     entregas
 ]
 
-const payments = ['DINHEIRO', 'DÉBITO', 'CRÉDITO', 'PIX']
+export const payments = ['DINHEIRO', 'DÉBITO', 'CRÉDITO', 'PIX']
 
  

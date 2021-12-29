@@ -1,15 +1,15 @@
 
-if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition((position) => {
-        localStorage.setItem('latitude', JSON.stringify(position.coords.latitude))
-        localStorage.setItem('longitude', JSON.stringify(position.coords.longitude))
-        }, 
-        (error) => console.log(error), 
-        {
-            enableHighAccuracy:true,
-            timeout: 5000
-        })
-}
+// if(navigator.geolocation){
+//     navigator.geolocation.getCurrentPosition((position) => {
+//         localStorage.setItem('latitude', JSON.stringify(position.coords.latitude))
+//         localStorage.setItem('longitude', JSON.stringify(position.coords.longitude))
+//         }, 
+//         (error) => console.log(error), 
+//         {
+//             enableHighAccuracy:true,
+//             timeout: 5000
+//         })
+// }
 
 // Initialize and add the map
 function initMap() {
@@ -35,7 +35,7 @@ let address1Field;
 let address2Field;
 let postalField;
 
-function initAutocomplete() {
+window.initAutocomplete = () => {
   address1Field = document.querySelector("input[name=street]") ;
   address2Field = document.querySelector("input[name=houseNumber]") ;
   postalField = document.querySelector("input[name=cep]") ;
@@ -59,7 +59,7 @@ function initAutocomplete() {
   autocomplete.addListener("place_changed", fillInAddress);
 }
 
-function fillInAddress() {
+window.fillInAddress = () => {
   // Get the place details from the autocomplete object.
   const place = autocomplete.getPlace();
   let address1 = "";
@@ -94,14 +94,14 @@ function fillInAddress() {
       }
       case "sublocality_level_1": {
         document.querySelector("input[name=district]").value = `${component.long_name}`;
-        localStorage.setItem('client', JSON.stringify(Client.init().updateDistrict(component.long_name)))
+        localStorage.setItem('client', JSON.stringify(Client.updateDistrict(component.long_name)))
         break;
       }
     }
   }
 
   address1Field.value = address1;
-  localStorage.setItem('client', JSON.stringify(Client.init().updateStreet(address1)))
+  localStorage.setItem('client', JSON.stringify(Client.updateStreet(address1)))
   if(postcode) postalField.value = postcode;
   
 
