@@ -127,6 +127,7 @@ In Progress.
 or 
 
 Access directly on GithubPages at the production page [https://truderia.github.io/Truderia/](https://truderia.github.io/Truderia/)
+
 To access all funcionalities out of service time use this link [https://mariodoncel.github.io/Truderia/](https://mariodoncel.github.io/Truderia/)
 
 I also had created a hidden sinmple application inside it to generate the orders by myself - called PDV system in Brazil - when the client dont use our site.
