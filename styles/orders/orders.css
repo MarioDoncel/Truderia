@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo {
+  height: 125px;
+}
+
+.logo img {
+  height: 100%;
+}
+
+header {
+  height: 150px;
+  color: #E8A323;
+  background-image: url("../../assets/Background.webp");
+  background-size: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* ================= ORDER PRINT =============== */
+.orderPrint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #dfdede;
+  padding: 0.5rem 2rem 0.25rem;
+  width: 65%;
+}
+
+input, textarea {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 0.25rem 0 0.25rem 0.375rem;
+  border-radius: 4px;
+}
+
+input, label {
+  font-size: 0.75rem;
+}
+
+input {
+  color: gray;
+}
+
+.inputItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.inputItem#note {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.inputItem label {
+  font-weight: bold;
+  width: 6rem;
+}
+
+.inputItem input, .inputItem textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.inputItem#phone input {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+}
+
+.inputItem#selectDistrict input {
+  position: relative;
+}
+
+.inputItem#district ul {
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  border-radius: 0 4px 4px 4px;
+  max-height: 70px;
+  overflow-y: auto;
+}
+
+.inputItem#district ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  font-size: 0.5rem;
+}
+
+.inputItem#district ul li:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+
+.inputItem#order {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inputItem#order #orderTable {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: white;
+  padding: 4px;
+}
+
+.inputItem#order #orderTable table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.inputItem#order #orderTable table thead {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.25);
+}
+
+.inputItem#order #orderTable table th {
+  font-size: 0.6rem;
+}
+
+.inputItem#order #orderTable table td {
+  font-size: 0.5rem;
+}
+
+th:first-child, th:last-child, td:first-child, tr td:last-child {
+  text-align: center;
+}
+
+.inputItem#order #orderTable table td.delete {
+  color: white;
+  background-color: red;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.total:first-child {
+  text-align: left;
+  padding-left: 0.25rem;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: none;
+}
+
+.orderTotal {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 1fr;
+      grid-template-columns: 5fr 1fr;
+  border-top: 1px dashed rgba(0, 0, 0, 0.25);
+}
+
+.orderTotal h3 {
+  padding-left: 0.25rem;
+}
+
+.orderPrint p#print {
+  text-align: center;
+  width: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 1rem;
+  background: gray;
+  cursor: pointer;
+}
+
+#paymentChosed p, #paymentChosed small, #paymentChosed input, #paymentChosed span {
+  font-size: 0.5rem;
+}
+
+#paymentChosed #change {
+  width: 40px;
+  padding: 0;
+}
+
+/* =========== SELECTIONS ======== */
+.selections {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.selections .items, .selections .conclusion {
+  width: 100%;
+}
+
+.selections button {
+  width: 80%;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.selections .items button {
+  background-color: #3a1212;
+  color: #E8A323;
+  padding: 0.25rem 0;
+}
+
+.selections .conclusion #payment {
+  background-color: #E8A323;
+  color: #3a1212;
+  font-size: 1rem;
+}
+
+.selections .conclusion #endOrder {
+  background-color: #72c472;
+}
+
+.selections .choices {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.selections .choices button {
+  background-color: #610000;
+  color: white;
+  font-size: 0.6rem;
+  width: 100%;
+  border-radius: 0;
+  height: 50PX;
+}
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #printable {
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+/*# sourceMappingURL=orders.css.map */

@@ -1,0 +1,49 @@
+.selections {
+    justify-content: space-between;
+    flex: 1;
+    .items, .conclusion{
+        width: 100%;
+    }
+
+    button{
+        width: 80%;
+        margin-bottom: 0.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .items button {
+        background-color: $principal;
+        color: $text;
+        padding: 0.25rem 0;
+    }
+    .conclusion {
+
+        #payment{
+            background-color: $text;
+            color: $principal;
+            font-size: 1rem;
+        }
+        #endOrder{
+            background-color: rgb(114, 196, 114);
+        }
+    }  
+    .choices{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.25rem;
+        width: 80%;
+        align-items: center;
+        justify-items: center;
+
+        button {
+            background-color: $secondary;
+            color: white;
+            font-size: 0.6rem;
+            width: 100%;
+            border-radius: 0;
+            height: 50PX;
+        }
+    } 
+}
+

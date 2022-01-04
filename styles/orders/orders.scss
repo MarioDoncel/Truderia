@@ -1,0 +1,81 @@
+
+$principal: #3a1212;
+$secondary:#610000;
+$text: #E8A323;
+
+@mixin d-flex-center($direction:row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @if $direction {
+        flex-direction: $direction;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+.flex-column{
+    @include d-flex-center(column)
+}
+.center{
+   @include d-flex-center()
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    flex-direction: column;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+main{
+    display: flex;
+}
+.logo{
+    height: 125px;
+
+    img{
+        height: 100%;
+    }
+}
+
+header{
+    height: 150px;
+    color: $text;
+    background-image: url('../../assets/Background.webp');
+    background-size: cover;
+    margin-bottom: 0.5rem;
+}
+
+/* ================= ORDER PRINT =============== */
+@import 'order-print';
+
+/* =========== SELECTIONS ======== */
+@import 'selections';
+
+
+@media print{
+   
+    body{
+        visibility: hidden;
+    }
+    #printable{
+        visibility: visible;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+}
