@@ -60,12 +60,12 @@ to React/Typescript and create a Node Backend whith MongoDb database, as soon i 
 ### Built With
 
 <!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
-* [Typescript](https://www.typescriptlang.org/)
-* [ReactJS](https://pt-br.reactjs.org/)
-* [Styled Components](https://styled-components.com/)
-* [React Router](https://v5.reactrouter.com/web/guides/quick-start)
-* [React Icons](https://react-icons.github.io/react-icons/)
-* Json-Server
+
+* HTML
+* CSS
+* Javascript Vanilla
+* Webpack
+* GoogleAPI
 
 <!-- 
 * [Next.js](https://nextjs.org/)
