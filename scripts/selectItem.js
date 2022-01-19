@@ -1,12 +1,12 @@
-import {menu} from './data'
+import { menu } from './data'
 
 window.selectItemHtml = (itemChosed, categoryChosed) => {
     const isTrudel = categoryChosed.category == 'trudel' || categoryChosed.category == 'miniTrudel'
-    const isSavoryTrudel = categoryChosed.category == 'savoryTrudel' 
-    const isMini = categoryChosed.category == 'miniTrudel' 
+    const isSavoryTrudel = categoryChosed.category == 'savoryTrudel'
+    const isMini = categoryChosed.category == 'miniTrudel'
     const isMiniTrudelttone = categoryChosed.category == 'miniChristmasTrudel'
-    const isDrinks = categoryChosed.category == 'drinks' 
-    const isRings = categoryChosed.category == 'rings' 
+    const isDrinks = categoryChosed.category == 'drinks'
+    const isRings = categoryChosed.category == 'rings'
     const isTrudelttone = categoryChosed.category == 'christmasTrudel' || categoryChosed.category == 'miniChristmasTrudel'
     const additionalData = menu.find(category => category.category == 'additional')
     const savoryAdditionalData = menu.find(category => category.category == 'savoryAdditional')
@@ -25,6 +25,12 @@ window.selectItemHtml = (itemChosed, categoryChosed) => {
         `
 
         items.forEach(({ image, flavour, price }) => {
+            if (flavour == 'RECHEIO EXTRA') {
+                console.log(itemChosed)
+                price = Math.ceil(itemChosed.price * 0.25)
+                flavour += '</br><small style="font-size:9px; color:black;">(pote separado + 50g)</small>'
+            }
+
             html += `
                 <div class="input">
                     
@@ -79,7 +85,7 @@ window.selectItemHtml = (itemChosed, categoryChosed) => {
         }
         fillOptionals(icecreamData)
     }
-    if(isSavoryTrudel && itemChosed.flavour != 'TRADICIONAL') fillOptionals(savoryAdditionalData)
+    if (isSavoryTrudel && itemChosed.flavour != 'TRADICIONAL') fillOptionals(savoryAdditionalData)
 
     if (!isDrinks) {
         fillOptionals(drinksData)
@@ -160,7 +166,7 @@ window.selectSize = (size) => {
 
     if (size.toLowerCase() == 'mini') {
         categoryChosed = `mini${categoryChosed.category}`
-        let category = menu.find(({category}) => category.toLowerCase() == categoryChosed.toLowerCase())
+        let category = menu.find(({ category }) => category.toLowerCase() == categoryChosed.toLowerCase())
         localStorage.setItem('categoryChosed', JSON.stringify(category))
         itemChosed.category = category.category
         itemChosed.price = category.items.find(flavour => itemChosed.flavour == flavour.flavour).price
